@@ -3,6 +3,10 @@
 #include <windowsx.h> 
 #include <mmsystem.h>
 #include <io.h>
+#else
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #endif
 #include <stdlib.h>
 #include <stdio.h>

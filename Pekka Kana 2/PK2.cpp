@@ -50,6 +50,7 @@ v1.2
  #include <SDL/SDL.h>
  #include <dirent.h>
  #include <sys/stat.h>
+ #include <unistd.h>
  #define _gcvt gcvt
  #define _getcwd getcwd
  #define ShowCursor SDL_ShowCursor
