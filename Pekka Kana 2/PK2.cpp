@@ -8069,16 +8069,16 @@ int PK_Alusta_Tilat()
 				return -1;
 			}
 
-			PisteLog_Kirjoita("  - Loading PK2STUFF.bmp \n");
-			if (PisteDraw_Lataa_Kuva(kuva_peli,"gfx/PK2STUFF.bmp", true) == PD_VIRHE){
+			PisteLog_Kirjoita("  - Loading pk2stuff.bmp \n");
+			if (PisteDraw_Lataa_Kuva(kuva_peli,"gfx/pk2stuff.bmp", true) == PD_VIRHE){
 				PK2_virhe = true;
-				PisteLog_Kirjoita("  - Loading PK2STUFF.bmp failed!\n");
+				PisteLog_Kirjoita("  - Loading pk2stuff.bmp failed!\n");
 				return -1;
 			}
 
-			if (PisteDraw_Lataa_Kuva(kuva_peli_sysmem,"gfx/PK2STUFF.bmp", true) == PD_VIRHE){
+			if (PisteDraw_Lataa_Kuva(kuva_peli_sysmem,"gfx/pk2stuff.bmp", true) == PD_VIRHE){
 				PK2_virhe = true;
-				PisteLog_Kirjoita("  - Loading PK2STUFF.bmp failed!\n");
+				PisteLog_Kirjoita("  - Loading pk2stuff.bmp failed!\n");
 				return -1;
 			}
 
@@ -8238,7 +8238,7 @@ int PK_Alusta_Tilat()
 
 			PisteLog_Kirjoita("  - Loading background picture \n");
 			kuva_tausta = PisteDraw_Buffer_Uusi(640,480,true,255);
-			PisteDraw_Lataa_Kuva(kuva_tausta,"gfx/MENU.bmp",true);
+			PisteDraw_Lataa_Kuva(kuva_tausta,"gfx/menu.bmp",true);
 
 			PK_Tallennukset_Tyhjenna();
 
@@ -8300,7 +8300,7 @@ int PK_Alusta_Tilat()
 
 			if (PisteDraw_Lataa_Kuva(kuva_tausta,mapkuva,true)==PD_VIRHE) { // Jos episodilla ei omaa...
 				PisteLog_Kirjoita("  - Loading map picture map.bmp from gfx folder \n");
-				if (PisteDraw_Lataa_Kuva(kuva_tausta,"gfx/MAP.bmp",true)==PD_VIRHE) { // ladataan oletuskuva.
+				if (PisteDraw_Lataa_Kuva(kuva_tausta,"gfx/map.bmp",true)==PD_VIRHE) { // ladataan oletuskuva.
 					PisteLog_Kirjoita("  - Loading map picture failed!\n");
 				}
 			}
@@ -8368,8 +8368,8 @@ int PK_Alusta_Tilat()
 
 			if (!peli_kesken)
 			{
-				PisteLog_Kirjoita("  - Loading menu background image: gfx/MENU.bmp\n");
-				PisteDraw_Lataa_Kuva(kuva_tausta,"gfx/MENU.bmp",true);
+				PisteLog_Kirjoita("  - Loading menu background image: gfx/menu.bmp\n");
+				PisteDraw_Lataa_Kuva(kuva_tausta,"gfx/menu.bmp",true);
 				//PK_Sumenna_Kuva(kuva_tausta, 640, 480);
 
 				PisteLog_Kirjoita("  - Loading menu background music: music/song09.xm \n");
@@ -8454,7 +8454,7 @@ int PK_Alusta_Tilat()
 			PisteDraw_Buffer_Tayta(PD_TAUSTABUFFER,0);
 			PisteDraw_Paivita_Naytto();
 
-			PisteDraw_Lataa_Kuva(kuva_tausta,"gfx/MENU.bmp",true);
+			PisteDraw_Lataa_Kuva(kuva_tausta,"gfx/menu.bmp",true);
 			PK_Sumenna_Kuva(kuva_tausta, 640, 480);
 
 			if (PK_Midas_Lataa_Musiikki("music/hiscore.xm")!=0)
@@ -8523,13 +8523,13 @@ int PK_Alusta_Tilat()
 			PisteDraw_Buffer_Tayta(PD_TAUSTABUFFER,0);
 			PisteDraw_Paivita_Naytto();
 
-			PisteLog_Kirjoita("  - Loading picture: gfx/INTRO.bmp\n");
+			PisteLog_Kirjoita("  - Loading picture: gfx/intro.bmp\n");
 
-			PisteDraw_Lataa_Kuva(kuva_tausta,"gfx/INTRO.bmp",true);
+			PisteDraw_Lataa_Kuva(kuva_tausta,"gfx/intro.bmp",true);
 
-			PisteLog_Kirjoita("  - Loading music: music/INTRO.XM\n");
+			PisteLog_Kirjoita("  - Loading music: music/intro.xm\n");
 
-			if (PK_Midas_Lataa_Musiikki("music/INTRO.XM")!=0)
+			if (PK_Midas_Lataa_Musiikki("music/intro.xm")!=0)
 				PK2_virhe = true;
 
 			musiikin_voimakkuus = musiikin_max_voimakkuus;

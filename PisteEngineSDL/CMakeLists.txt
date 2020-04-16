@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.6)
 project(PisteEngineSDL)
 
 add_definitions("-Wno-write-strings -g")
-include_directories("../PisteLanguage/")
+include_directories("../PisteLanguage/" "/usr/include/SDL")
 
 set(SOURCES
 Game.cpp
